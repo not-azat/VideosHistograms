@@ -1,0 +1,10 @@
+
+*.MF
+
+input/text_files_input/*
+
+*.class
+
+.idea/artifacts/VideosHist_jar.xml
+
+VideosHist.jar
