@@ -15,7 +15,7 @@ import org.apache.hadoop.util.*;
 public class SmallFilesToSequenceFileConverter extends Configured implements Tool {
 
     static class SequenceFileMapper extends MapReduceBase
-            implements Mapper<NullWritable, BytesWritable, Text, BytesWritable> {
+            implements Mapper<Text, BytesWritable, Text, BytesWritable> {
 
         private JobConf conf;
 
@@ -25,10 +25,9 @@ public class SmallFilesToSequenceFileConverter extends Configured implements Too
         }
 
         @Override
-        public void map(NullWritable key, BytesWritable value, OutputCollector<Text, BytesWritable> output,
+        public void map(Text key, BytesWritable value, OutputCollector<Text, BytesWritable> output,
                         Reporter reporter) throws IOException {
-            String filename = conf.get("map.input.file");
-            output.collect(new Text(filename), value);
+            output.collect(key, value);
         }
     }
 
@@ -40,7 +39,7 @@ public class SmallFilesToSequenceFileConverter extends Configured implements Too
         }
         FileInputFormat.addInputPath(conf, new Path(args[0]));
         FileOutputFormat.setOutputPath(conf, new Path(args[1]));
-        conf.setInputFormat(WholeFileInputFormat.class);
+        conf.setInputFormat(CombineWholeFileInputFormat.class);
         conf.setOutputFormat(SequenceFileOutputFormat.class);
         conf.setOutputKeyClass(Text.class);
         conf.setOutputValueClass(BytesWritable.class);

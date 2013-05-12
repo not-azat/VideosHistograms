@@ -4,26 +4,32 @@ import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
 import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapred.*;
+import org.apache.hadoop.mapred.lib.CombineFileSplit;
 
 import java.io.IOException;
 
 /**
  * User: azat, Date: 13.05.13, Time: 1:28
  */
-class WholeFileRecordReader implements RecordReader<NullWritable, BytesWritable> {
+class CombineWholeFileRecordReader implements RecordReader<Text, BytesWritable> {
 
-    private FileSplit fileSplit;
+    private CombineFileSplit fileSplit;
     private Configuration conf;
-    private boolean processed = false;
+    private int processed;
+    private long processedBytes;
+    private long numPaths;
 
-    public WholeFileRecordReader(FileSplit fileSplit, Configuration conf) throws IOException {
+    public CombineWholeFileRecordReader(CombineFileSplit fileSplit, Configuration conf) throws IOException {
         this.fileSplit = fileSplit;
+        this.numPaths = fileSplit.getNumPaths();
+        this.processed = 0;
+        this.processedBytes = 0;
         this.conf = conf;
     }
 
     @Override
-    public NullWritable createKey() {
-        return NullWritable.get();
+    public Text createKey() {
+        return new Text();
     }
 
     @Override
@@ -33,29 +39,31 @@ class WholeFileRecordReader implements RecordReader<NullWritable, BytesWritable>
 
     @Override
     public long getPos() throws IOException {
-        return processed ? fileSplit.getLength() : 0;
+        return processedBytes;
     }
 
     @Override
     public float getProgress() throws IOException {
-        return processed ? 1.0f : 0.0f;
+        return processed / (float) this.numPaths;
     }
 
     @Override
-    public boolean next(NullWritable key, BytesWritable value) throws IOException {
-        if (!processed) {
-            byte[] contents = new byte[(int) fileSplit.getLength()];
-            Path file = fileSplit.getPath();
+    public boolean next(Text key, BytesWritable value) throws IOException {
+        if (processed < numPaths) {
+            byte[] contents = new byte[(int) fileSplit.getLengths()[processed]];
+            Path file = fileSplit.getPath(processed);
             FileSystem fs = file.getFileSystem(conf);
             FSDataInputStream in = null;
             try {
                 in = fs.open(file);
                 IOUtils.readFully(in, contents, 0, contents.length);
                 value.set(contents, 0, contents.length);
+                key.set(file.toString());
             } finally {
                 IOUtils.closeStream(in);
             }
-            processed = true;
+            processedBytes += fileSplit.getLengths()[processed];
+            processed++;
             return true;
         }
         return false;

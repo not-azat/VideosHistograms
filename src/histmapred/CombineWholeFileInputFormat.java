@@ -3,15 +3,17 @@ package histmapred;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.BytesWritable;
-import org.apache.hadoop.io.NullWritable;
+import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapred.*;
+import org.apache.hadoop.mapred.lib.CombineFileInputFormat;
+import org.apache.hadoop.mapred.lib.CombineFileSplit;
 
 import java.io.IOException;
 
 /**
  * User: azat, Date: 13.05.13, Time: 1:24
  */
-public class WholeFileInputFormat extends FileInputFormat<NullWritable, BytesWritable> {
+public class CombineWholeFileInputFormat extends CombineFileInputFormat<Text, BytesWritable> {
 
     @Override
     protected boolean isSplitable(FileSystem fs, Path filename) {
@@ -19,8 +21,8 @@ public class WholeFileInputFormat extends FileInputFormat<NullWritable, BytesWri
     }
 
     @Override
-    public RecordReader<NullWritable, BytesWritable> getRecordReader(
+    public RecordReader<Text, BytesWritable> getRecordReader(
             InputSplit split, JobConf job, Reporter reporter) throws IOException {
-        return new WholeFileRecordReader((FileSplit) split, job);
+        return new CombineWholeFileRecordReader((CombineFileSplit) split, job);
     }
 }
