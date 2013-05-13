@@ -9,7 +9,23 @@
 		<value>localhost:9001</value>
 	</property>
 	<property>
-		<name>mapred.max.split.size</name>
-		<value>67108864</value>
+		<name>mapred.reduce.tasks</name>
+		<value>4</value>
+	</property>
+	<property>
+		<name>frames</name>
+		<value>4</value>
+	</property>
+	<property>
+		<name>mapred.job.reuse.jvm.num.tasks</name>
+ 		<value>-1</value>
+	</property>
+	<property>
+		<name>mapred.tasktracker.map.tasks.maximum</name>
+		<value>4</value>
+	</property>
+	<property>
+		<name>mapred.tasktracker.reduce.tasks.maximum</name>
+		<value>2</value>
 	</property>
 </configuration>

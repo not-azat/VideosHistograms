@@ -12,3 +12,9 @@ VideosHist.jar
 text_files_output_result5/_SUCCESS
 
 text_files_output_result4/part-00003
+
+input/*
+
+output/*
+
+.DS_Store
