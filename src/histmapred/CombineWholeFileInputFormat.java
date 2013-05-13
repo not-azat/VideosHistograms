@@ -15,8 +15,12 @@ import java.io.IOException;
  */
 public class CombineWholeFileInputFormat extends CombineFileInputFormat<Text, BytesWritable> {
 
+    public CombineWholeFileInputFormat() {
+        this.setMaxSplitSize(64*1024*1024);
+    }
+
     @Override
-    protected boolean isSplitable(FileSystem fs, Path filename) {
+    protected boolean isSplitable(FileSystem fs, Path file) {
         return false;
     }
 

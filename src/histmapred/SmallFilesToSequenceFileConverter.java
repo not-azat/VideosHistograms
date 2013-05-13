@@ -1,12 +1,12 @@
 package histmapred;
 
 import java.io.IOException;
+import java.util.Iterator;
 
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapred.*;
-import org.apache.hadoop.mapred.lib.IdentityReducer;
 import org.apache.hadoop.util.*;
 
 /**
@@ -14,8 +14,18 @@ import org.apache.hadoop.util.*;
  */
 public class SmallFilesToSequenceFileConverter extends Configured implements Tool {
 
-    static class SequenceFileMapper extends MapReduceBase
-            implements Mapper<Text, BytesWritable, Text, BytesWritable> {
+    static class SequenceFileReducer extends MapReduceBase implements Reducer<Text, IntArrayWritable, Text, IntArrayWritable> {
+
+        @Override
+        public void reduce(Text key, Iterator<IntArrayWritable> values,
+                           OutputCollector<Text, IntArrayWritable> output, Reporter reporter) throws IOException {
+            while (values.hasNext()) {
+                output.collect(key, values.next());
+            }
+        }
+    }
+
+    static class SequenceFileMapper extends MapReduceBase implements Mapper<Text, BytesWritable, Text, IntArrayWritable> {
 
         private JobConf conf;
 
@@ -25,9 +35,17 @@ public class SmallFilesToSequenceFileConverter extends Configured implements Too
         }
 
         @Override
-        public void map(Text key, BytesWritable value, OutputCollector<Text, BytesWritable> output,
+        public void map(Text key, BytesWritable value, OutputCollector<Text, IntArrayWritable> output,
                         Reporter reporter) throws IOException {
-            output.collect(key, value);
+
+            IntArrayWritable outputValue = new IntArrayWritable();
+            IntWritable[] outputArray = new IntWritable[4];
+            outputArray[0] = new IntWritable(1);
+            outputArray[1] = new IntWritable(2);
+            outputArray[2] = new IntWritable(3);
+            outputArray[3] = new IntWritable(4);
+            outputValue.set(outputArray);
+            output.collect(key, outputValue);
         }
     }
 
@@ -40,11 +58,18 @@ public class SmallFilesToSequenceFileConverter extends Configured implements Too
         FileInputFormat.addInputPath(conf, new Path(args[0]));
         FileOutputFormat.setOutputPath(conf, new Path(args[1]));
         conf.setInputFormat(CombineWholeFileInputFormat.class);
-        conf.setOutputFormat(SequenceFileOutputFormat.class);
+        conf.setOutputFormat(TextOutputFormat.class);
+
         conf.setOutputKeyClass(Text.class);
-        conf.setOutputValueClass(BytesWritable.class);
+        conf.setOutputValueClass(IntArrayWritable.class);
+
         conf.setMapperClass(SequenceFileMapper.class);
-        conf.setReducerClass(IdentityReducer.class);
+        conf.setCombinerClass(SequenceFileReducer.class);
+
+        // turn off reducer
+        conf.setNumReduceTasks(0);
+        //conf.setReducerClass(IdentityReducer.class);
+
         JobClient.runJob(conf);
         return 0;
     }
