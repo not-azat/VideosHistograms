@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6bb0936-3615-4962-8314-0dd3ada33542" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/histmapred/SmallFilesToSequenceFileConverter.java" afterPath="$PROJECT_DIR$/src/histmapred/VideoHistogramComputer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/VideoHistTest/VideoHistTest.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/VideoHistTest/src/VideoHistogramComputerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VideosHist.iml" afterPath="$PROJECT_DIR$/VideosHist.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="VideosHist.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="a6bb0936-3615-4962-8314-0dd3ada33542" time="1368477431947" ignored="false" />
+    <file path="/Dummy.txt" changelist="a6bb0936-3615-4962-8314-0dd3ada33542" time="1368535766561" ignored="false" />
     <file path="/SmallFilesToSequenceFileConverter.java" changelist="a6bb0936-3615-4962-8314-0dd3ada33542" time="1368485960259" ignored="false" />
     <file path="/WholeFileInputFormat.java" changelist="a6bb0936-3615-4962-8314-0dd3ada33542" time="1368458029941" ignored="false" />
     <file path="/WholeFileRecordReader.java" changelist="a6bb0936-3615-4962-8314-0dd3ada33542" time="1368398861634" ignored="false" />
@@ -17,8 +20,11 @@
     <file path="/VideoFileMapper.java" changelist="a6bb0936-3615-4962-8314-0dd3ada33542" time="1368482308008" ignored="false" />
     <file path="/HistogramSumReducer.java" changelist="a6bb0936-3615-4962-8314-0dd3ada33542" time="1368481082577" ignored="false" />
     <file path="/Utils.java" changelist="a6bb0936-3615-4962-8314-0dd3ada33542" time="1368480425090" ignored="false" />
-    <file path="/fragment.java" changelist="a6bb0936-3615-4962-8314-0dd3ada33542" time="1368523113583" ignored="false" />
+    <file path="/fragment.java" changelist="a6bb0936-3615-4962-8314-0dd3ada33542" time="1368535766561" ignored="false" />
     <file path="/VideoHistogramComputer.java" changelist="a6bb0936-3615-4962-8314-0dd3ada33542" time="1368526100031" ignored="false" />
+    <file path="/VideoFileMapperTest.java" changelist="a6bb0936-3615-4962-8314-0dd3ada33542" time="1368536182242" ignored="false" />
+    <file path="/MaxTemperatureTest.java" changelist="a6bb0936-3615-4962-8314-0dd3ada33542" time="1368533098513" ignored="false" />
+    <file path="/VideoHistogramComputerTest.java" changelist="a6bb0936-3615-4962-8314-0dd3ada33542" time="1368534600166" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +39,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -69,7 +76,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -83,9 +89,7 @@
         <entry file="file://$PROJECT_DIR$/src/histmapred/CombineWholeFileInputFormat.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="27" column="43" selection-start="740" selection-end="753" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -94,17 +98,36 @@
         <entry file="file://$PROJECT_DIR$/src/histmapred/CombineWholeFileRecordReader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="13" column="6" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VideoHistogramComputer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/histmapred/VideoHistogramComputer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="22" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VideoHistogramComputerTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/VideoHistTest/src/VideoHistogramComputerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="64" column="50" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.3041237">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1921#1929#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VideoHistogramComputer.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/histmapred/VideoHistogramComputer.java">
+      <file leaf-file-name="CoreMatchers.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///usr/local/Cellar/hadoop/1.1.1/libexec/lib/mockito-all-1.8.5.jar!/org/hamcrest/CoreMatchers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="22" selection-start="613" selection-end="613" vertical-scroll-proportion="0.14925373">
+            <state line="22" column="44" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -114,17 +137,6 @@
         <entry file="file://$PROJECT_DIR$/src/histmapred/HistogramSumReducer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="25" column="29" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Utils.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/histmapred/Utils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -134,29 +146,7 @@
         <entry file="file://$PROJECT_DIR$/src/histmapred/VideoFileMapper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="91" column="24" selection-start="3449" selection-end="3449" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntWritable.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///usr/local/Cellar/hadoop/1.1.1/libexec/hadoop-core-1.1.1.jar!/org/apache/hadoop/io/IntWritable.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="11" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntArrayWritable.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/histmapred/IntArrayWritable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="28" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -188,6 +178,8 @@
         <option value="$PROJECT_DIR$/src/histmapred/VideoFileMapper.java" />
         <option value="$PROJECT_DIR$/src/histmapred/SmallFilesToSequenceFileConverter.java" />
         <option value="$PROJECT_DIR$/src/histmapred/VideoHistogramComputer.java" />
+        <option value="$PROJECT_DIR$/VideoHistTest/src/VideoFileMapperTest.java" />
+        <option value="$PROJECT_DIR$/VideoHistTest/src/VideoHistogramComputerTest.java" />
       </list>
     </option>
   </component>
@@ -222,7 +214,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -238,6 +229,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="VideosHist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VideosHist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VideosHist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VideoHistTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VideosHist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VideosHist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VideoHistTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -279,35 +302,62 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/xuggle-xuggler-5.4.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.VideoHistogramComputerTest">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -316,19 +366,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -358,6 +395,19 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
@@ -373,16 +423,16 @@
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <module name="" />
+      <module name="VideoHistTest" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="VideoHistogramComputerTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -392,7 +442,31 @@
       <patterns />
       <method />
     </configuration>
-    <list size="0" />
+    <configuration default="false" name="VideoHistogramComputerTest" type="JUnit" factoryName="JUnit">
+      <module name="VideoHistTest" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="VideoHistogramComputerTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.VideoHistogramComputerTest" />
+    </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -441,8 +515,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.6727829" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.6712538" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32874617" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -518,9 +592,7 @@
     <entry file="file://$PROJECT_DIR$/src/histmapred/CombineWholeFileRecordReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="6" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -534,18 +606,14 @@
     <entry file="file://$PROJECT_DIR$/src/histmapred/VideoFileMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="28" selection-start="572" selection-end="587" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/histmapred/IntArrayWritable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="28" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -569,59 +637,66 @@
     <entry file="file://$PROJECT_DIR$/src/histmapred/CombineWholeFileRecordReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="6" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/histmapred/CombineWholeFileInputFormat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="43" selection-start="740" selection-end="753" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/histmapred/HistogramSumReducer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="29" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/histmapred/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
+        <state line="8" column="0" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/histmapred/VideoHistogramComputer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="22" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/histmapred/IntArrayWritable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="28" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="26" column="5" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/histmapred/VideoFileMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="91" column="24" selection-start="3449" selection-end="3449" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/histmapred/VideoHistogramComputer.java">
+    <entry file="jar:///usr/local/Cellar/hadoop/1.1.1/libexec/lib/mockito-all-1.8.5.jar!/org/hamcrest/CoreMatchers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="22" selection-start="613" selection-end="613" vertical-scroll-proportion="0.14925373">
+        <state line="22" column="44" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VideoHistTest/src/VideoHistogramComputerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="50" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.3041237">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1921#1929#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -685,6 +760,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
