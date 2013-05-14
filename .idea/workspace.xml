@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6bb0936-3615-4962-8314-0dd3ada33542" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/histmapred/HistogramSumReducer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/histmapred/Utils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/histmapred/SmallFilesToSequenceFileConverter.java" afterPath="$PROJECT_DIR$/src/histmapred/SmallFilesToSequenceFileConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/histmapred/VideoFileMapper.java" afterPath="$PROJECT_DIR$/src/histmapred/VideoFileMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VideosHist.iml" afterPath="$PROJECT_DIR$/VideosHist.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/hadoop-localhost.xml" afterPath="$PROJECT_DIR$/config/hadoop-localhost.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/histmapred/SmallFilesToSequenceFileConverter.java" afterPath="$PROJECT_DIR$/src/histmapred/VideoHistogramComputer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="VideosHist.iws" />
@@ -23,6 +17,8 @@
     <file path="/VideoFileMapper.java" changelist="a6bb0936-3615-4962-8314-0dd3ada33542" time="1368482308008" ignored="false" />
     <file path="/HistogramSumReducer.java" changelist="a6bb0936-3615-4962-8314-0dd3ada33542" time="1368481082577" ignored="false" />
     <file path="/Utils.java" changelist="a6bb0936-3615-4962-8314-0dd3ada33542" time="1368480425090" ignored="false" />
+    <file path="/fragment.java" changelist="a6bb0936-3615-4962-8314-0dd3ada33542" time="1368523113583" ignored="false" />
+    <file path="/VideoHistogramComputer.java" changelist="a6bb0936-3615-4962-8314-0dd3ada33542" time="1368526100031" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +83,9 @@
         <entry file="file://$PROJECT_DIR$/src/histmapred/CombineWholeFileInputFormat.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="27" column="43" selection-start="740" selection-end="753" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,18 +94,18 @@
         <entry file="file://$PROJECT_DIR$/src/histmapred/CombineWholeFileRecordReader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="13" column="6" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SmallFilesToSequenceFileConverter.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/histmapred/SmallFilesToSequenceFileConverter.java">
+      <file leaf-file-name="VideoHistogramComputer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/histmapred/VideoHistogramComputer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.7048093">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="20" column="22" selection-start="613" selection-end="613" vertical-scroll-proportion="0.14925373">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -156,7 +154,9 @@
         <entry file="file://$PROJECT_DIR$/src/histmapred/IntArrayWritable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="26" column="28" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -187,6 +187,7 @@
         <option value="$PROJECT_DIR$/src/histmapred/HistogramSumReducer.java" />
         <option value="$PROJECT_DIR$/src/histmapred/VideoFileMapper.java" />
         <option value="$PROJECT_DIR$/src/histmapred/SmallFilesToSequenceFileConverter.java" />
+        <option value="$PROJECT_DIR$/src/histmapred/VideoHistogramComputer.java" />
       </list>
     </option>
   </component>
@@ -253,6 +254,10 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -292,6 +297,11 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -505,23 +515,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/histmapred/CombineWholeFileInputFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="43" selection-start="740" selection-end="753" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/histmapred/CombineWholeFileRecordReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="6" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/histmapred/SmallFilesToSequenceFileConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="58" selection-start="2367" selection-end="2367" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -547,7 +543,9 @@
     <entry file="file://$PROJECT_DIR$/src/histmapred/IntArrayWritable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="28" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -568,17 +566,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/histmapred/CombineWholeFileInputFormat.java">
+    <entry file="file://$PROJECT_DIR$/src/histmapred/CombineWholeFileRecordReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="43" selection-start="740" selection-end="753" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="13" column="6" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/histmapred/IntArrayWritable.java">
+    <entry file="file://$PROJECT_DIR$/src/histmapred/CombineWholeFileInputFormat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="28" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="27" column="43" selection-start="740" selection-end="753" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -591,17 +593,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/histmapred/CombineWholeFileRecordReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="6" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/histmapred/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="13" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/histmapred/IntArrayWritable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="28" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -614,12 +618,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/histmapred/SmallFilesToSequenceFileConverter.java">
+    <entry file="file://$PROJECT_DIR$/src/histmapred/VideoHistogramComputer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.7048093">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="20" column="22" selection-start="613" selection-end="613" vertical-scroll-proportion="0.14925373">
+          <folding />
         </state>
       </provider>
     </entry>
